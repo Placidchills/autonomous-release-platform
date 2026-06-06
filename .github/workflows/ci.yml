@@ -29,3 +29,8 @@ jobs:
           npm start &
           sleep 5
           curl http://localhost:3000/health
+
+      - name: Build Docker IMage
+        run : |
+          cd app
+          docker build -t app:ci .
